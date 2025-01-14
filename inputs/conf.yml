@@ -1,0 +1,28 @@
+output_dir: "output.2025-mock-vsmash"
+
+database:
+  basename: "vmr_MSL39_v4"
+  zip: "/group/ctbrowngrp5/sourmash-db/ictv-vmr-msl39/vmr_MSL39_v4.zip"
+  lineages: "/group/ctbrowngrp5/sourmash-db/ictv-vmr-msl39/vmr_MSL39_v4.lineages.csv"
+
+lgc_thresholds: [0.7,0.75,0.8,0.85]
+
+sourmash_params:
+  full:
+    DNA:
+     ksize: [21,31]
+     scaled: [100] #1000
+     threshold_bp: 300
+    skipm1n3:
+     ksize: [18,21,24,27] #15,18
+     scaled: [100] #1000
+     threshold_bp: 300
+    skipm2n3:
+      ksize: [18,21,24,27] #15,18
+      scaled: [100] #1000
+      threshold_bp: 300
+  test:
+    skipm2n3:
+      ksize: [24]
+      scaled: [100]
+      threshold_bp: 300
