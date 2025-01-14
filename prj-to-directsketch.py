@@ -6,7 +6,7 @@ def generate_ena_links(row):
     acc = row["acc"]
     librarylayout = row["librarylayout"]
     prefix = acc[:6]
-    group = f"{acc[-3:]}"  # 046 in ERR13480646
+    group = f"0{acc[-2:]}"  # 046 in ERR13480646
     url_base = f"ftp://ftp.sra.ebi.ac.uk/vol1/fastq/{prefix}/{group}/{acc}"
     
     # Generate URLs based on library layout
