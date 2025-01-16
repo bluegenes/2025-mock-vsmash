@@ -7,7 +7,7 @@ def generate_ena_links(row):
     librarylayout = row["librarylayout"]
     prefix = acc[:6]
     group = f"0{acc[-2:]}"  # 046 in ERR13480646
-    url_base = f"ftp://ftp.sra.ebi.ac.uk/vol1/fastq/{prefix}/{group}/{acc}"
+    url_base = f"http://ftp.sra.ebi.ac.uk/vol1/fastq/{prefix}/{group}/{acc}"
     
     # Generate URLs based on library layout
     if librarylayout == "PAIRED":
